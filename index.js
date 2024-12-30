@@ -3,6 +3,9 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let passwordOneEl = document.getElementById("passwordOne")
 let passwordTwoEl = document.getElementById("passwordTwo")
+let inputEl = document.getElementById("passwordInput")
+
+let passwordLength = 15 // default
 
 
 function generatePasswords() {
@@ -11,8 +14,11 @@ function generatePasswords() {
 }
 
 function generateRandomPassword() {
+    passwordLength = inputEl.value
     let password = ""
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < passwordLength; i++) {
+        passwordLength = inputEl.value
+        console.log(passwordLength)
         characterIndex = Math.floor (Math.random() * characters.length)
         password += characters[characterIndex];
     }

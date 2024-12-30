@@ -1,0 +1,47 @@
+body {
+    background: #1F2937;
+    color: white;
+    margin: 10px;
+}
+
+h1 {
+    font-family: Karla;
+    margin-bottom: -15px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+#randomPasswordText {
+    color: #10B981;
+}
+
+#passwords {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+button {
+    background: #10B981;
+    width: 191px;
+    height: 42px;
+    top: 284px;
+    left: 52px;
+    padding: 9px 17px 9px 15px;
+    gap: 12px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+    margin-top: 40px;
+    color:white;
+}
+
+p {
+    background: #273549;
+    padding: 15px;
+    border-radius: 6px;
+    min-width: 100px;
+}

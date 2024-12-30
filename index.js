@@ -5,8 +5,13 @@ let passwordOneEl = document.getElementById("passwordOne")
 let passwordTwoEl = document.getElementById("passwordTwo")
 let inputEl = document.getElementById("passwordInput")
 
-let passwordLength = 15 // default
-
+function copyPassword(event) {
+    let copyText = event.target.innerText
+    
+    navigator.clipboard.writeText(copyText)
+    
+    alert("Copied: " + copyText);
+}
 
 function generatePasswords() {
     passwordOneEl.textContent = generateRandomPassword()
@@ -14,11 +19,10 @@ function generatePasswords() {
 }
 
 function generateRandomPassword() {
-    passwordLength = inputEl.value
+    let passwordLength = inputEl.value
     let password = ""
     for (let i = 0; i < passwordLength; i++) {
         passwordLength = inputEl.value
-        console.log(passwordLength)
         characterIndex = Math.floor (Math.random() * characters.length)
         password += characters[characterIndex];
     }
